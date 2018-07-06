@@ -1,0 +1,33 @@
+{% extends "dy0.html" %}
+{% block body %}
+<script type="text/javascript">
+var intervalID = setInterval(update_values,1000);
+
+  function update_values() {
+        $.getJSON($SCRIPT_ROOT + '/_stuff',
+               
+      function(data) {
+        $('#result').text(data.result);
+        console.log(data)
+      });
+      
+    };
+   
+    
+    
+    function stopTextColor() {
+      clearInterval(intervalID);
+    }
+    
+</script>
+<body onload="update_values();">
+<h1>Dynamic Update</h1>
+<p>
+    <span id="result">?</span>
+<script>
+document.getElementById("result").innerHTML;
+</script>
+
+	<button onclick="stopTextColor();">Stop</button>
+	</body>
+{% endblock %}
