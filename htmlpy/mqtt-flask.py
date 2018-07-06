@@ -8,10 +8,10 @@ lat = 19.22
 longi = 72.86
 
 app = Flask(__name__)
-app.config['MQTT_BROKER_URL'] = 'm10.cloudmqtt.com'
-app.config['MQTT_BROKER_PORT'] = 16214
-app.config['MQTT_USERNAME'] = 'sqostmqh'
-app.config['MQTT_PASSWORD'] = 'g2KLaGp1V3dG'
+app.config['MQTT_BROKER_URL'] = 'Your server'
+app.config['MQTT_BROKER_PORT'] = Your port
+app.config['MQTT_USERNAME'] = 'Your Username'
+app.config['MQTT_PASSWORD'] = 'Your Password'
 app.config['MQTT_REFRESH_TIME'] = 1.0  # refresh time in seconds
 mqtt = Mqtt(app)
 
